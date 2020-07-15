@@ -13,6 +13,18 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 isLoading: true
             }
+        case FETCH_DATA_SUCCESS:
+            return {
+                ...state,
+                pokemonList: action.payload,
+                isLoading: false
+            }
+        case FETCH_DATA_FAILURE:
+            return {
+                ...state,
+                error: action.payload,
+                isLoading: false
+            }
         default: 
             return state
     }

@@ -14,6 +14,11 @@ const PokemonList = props => {
         <div>
             {isLoading && <h4>Loading Pokemon List...</h4>}
             {error && <h4 className="error">Something went wrong...{error}</h4>}
+            {pokemonList.length > 0 && (
+                pokemonList.map(pokemon => {
+                    return (<div>{pokemon.pokemon_species.name}</div>)
+                })
+            )}
         </div>
     )
 }
