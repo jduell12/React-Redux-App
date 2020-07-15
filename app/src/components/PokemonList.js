@@ -3,6 +3,8 @@ import {connect} from 'react-redux'
 
 import {fetchPokemon} from '../store/actions'
 
+import PokemonCard from './PokemonCard'
+
 const PokemonList = props => {
     const{fetchPokemon, isLoading, pokemonList, error} = props;
 
@@ -16,7 +18,7 @@ const PokemonList = props => {
             {error && <h4 className="error">Something went wrong...{error}</h4>}
             {pokemonList.length > 0 && (
                 pokemonList.map(pokemon => {
-                    return (<div>{pokemon.pokemon_species.name}</div>)
+                    return (<PokemonCard key={pokemon.entry_number} pokemon={pokemon}/>)
                 })
             )}
         </div>
