@@ -1,10 +1,13 @@
-import {FETCH_DATA_START, FETCH_DATA_SUCCESS, FETCH_DATA_FAILURE} from '../actions'
+import {
+    FETCH_DATA_START, FETCH_DATA_SUCCESS, FETCH_DATA_FAILURE
+} from '../actions'
 
 const initialState = {
     isLoading: false, 
     pokemonList: [],
     error: '',
-    pokemonImageUrl: '' 
+    pokemonImageUrl: '',
+    pokemonAbilities: [] 
 }
 
 export const reducer = (state = initialState, action) => {

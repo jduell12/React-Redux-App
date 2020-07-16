@@ -12,6 +12,7 @@ export const fetchPokemon = () => {
         axios
             .get("https://pokeapi.co/api/v2/pokedex/kanto")
             .then(res => {
+                console.log('in action', res.data);
                 dispatch({
                     type: FETCH_DATA_SUCCESS, 
                     payload: res.data.pokemon_entries
