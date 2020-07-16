@@ -63,6 +63,7 @@ body{
 
 h1{
 	font-size: 3rem;
+	color: #FFCB05;
 }
 
 h2{
@@ -81,9 +82,21 @@ p{
 	font-size: 1.5rem;
 }
 
+img{
+	width: 50%;
+}
+
 /*classes*/
 .error{
 	color: red;
+}
+
+.pokeImg{
+	width: 50%;
+}
+
+.pokeInfo{
+	width: 50%;
 }
 
 /*Id's*/

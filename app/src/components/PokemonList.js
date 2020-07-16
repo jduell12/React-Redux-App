@@ -18,7 +18,9 @@ const PokemonList = props => {
             {error && <h4 className="error">Something went wrong...{error}</h4>}
            {pokemonList.length > 0 && (
                 pokemonList.map(pokemon => {
-                    return (<PokemonCard key={pokemon.entry_number} pokemon={pokemon}/>)
+                    return (
+                    <PokemonCard key={pokemon.entry_number} pokemon={pokemon}/>
+                    )
                 })
             )}
         </div>

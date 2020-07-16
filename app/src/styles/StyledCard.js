@@ -8,3 +8,8 @@ export const StyledCard = styled.div`
     justify-content: space-between;
     padding: 3%;
 `
+
+export const StyledTopInfo = styled.div`
+    display: flex;
+    justify-content: space-between;
+`

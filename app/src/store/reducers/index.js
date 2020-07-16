@@ -3,7 +3,8 @@ import {FETCH_DATA_START, FETCH_DATA_SUCCESS, FETCH_DATA_FAILURE} from '../actio
 const initialState = {
     isLoading: false, 
     pokemonList: [],
-    error: ''
+    error: '',
+    pokemonImageUrl: '' 
 }
 
 export const reducer = (state = initialState, action) => {
