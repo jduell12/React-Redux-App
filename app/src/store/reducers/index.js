@@ -1,5 +1,6 @@
 import {
-    FETCH_DATA_START, FETCH_DATA_SUCCESS, FETCH_DATA_FAILURE
+    FETCH_DATA_START, FETCH_DATA_SUCCESS, FETCH_DATA_FAILURE, 
+    FETCH_TYPES_START, FETCH_TYPES_SUCCESS, FETCH_TYPES_FAILURE
 } from '../actions'
 
 const initialState = {
@@ -7,7 +8,7 @@ const initialState = {
     pokemonList: [],
     error: '',
     pokemonImageUrl: '',
-    pokemonAbilities: [] 
+    pokemonTypes: []
 }
 
 export const reducer = (state = initialState, action) => {
@@ -28,6 +29,24 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 error: action.payload,
                 isLoading: false
+            }
+        case FETCH_TYPES_START:
+            return {
+                ...state,
+                isLoading: true, 
+                error: '',
+            }
+        case FETCH_TYPES_SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                pokemonTypes: action.payload
+            }
+        case FETCH_TYPES_FAILURE:
+            return {
+                ...state,
+                isLoading: false,
+                error: action.payload
             }
         default: 
             return state

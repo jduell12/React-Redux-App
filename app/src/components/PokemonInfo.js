@@ -12,9 +12,10 @@ const PokemonInfo = props => {
                 <p>{number}</p>
                 <h3 id="pokemonName">{name}</h3>
             </StyledTopInfo>
-            {/*get pokemon type from api */}
+            
         </div>
     )
 }
+
 
 export default PokemonInfo;
